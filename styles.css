@@ -326,7 +326,6 @@ font-weight: 500;
     color: #ffffff;
 }
 
-
 /* Main */
 .container-items{
     display: grid;
@@ -334,6 +333,9 @@ font-weight: 500;
     gap: 70px;
     margin: 50px;
 }
+
+
+
 .item{
     border-radius: 10px;
 }
@@ -414,7 +416,6 @@ font-weight: 500;
 }
 
 /* Femeninas */
-
 
 
 /* Footer */
