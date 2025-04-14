@@ -1013,6 +1013,11 @@ font-weight: 500;
     gap: 70px;
     margin: 50px;
 }
+
+
+.container.femeninas{
+    margin-top: 20px;
+}
 .item{
     border-radius: 10px;
 }
@@ -1265,6 +1270,10 @@ font-weight: 500;
         grid-template-columns: repeat(auto-fit, minmax(28rem, 1 fr));
     }
     
+    .container.masculinas{
+        margin-top: -100px;
+    }
+
     .gallery{
         grid-template-rows: repeat(2, 15rem);
     }
@@ -1322,6 +1331,10 @@ font-weight: 500;
     .container-items{
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap: 1rem;
+    }
+
+    .container.masculinas{
+        margin-top: -100px;
     }
 
     .gallery{
