@@ -904,6 +904,10 @@ margin-top: 25px;
     
       .card-list-products {
         justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
     
       .card {
@@ -961,6 +965,10 @@ margin-top: 25px;
       margin-top: 50px;
     }
   
+    .card-list-products {
+        margin: 20px;
+    }
+
     .card {
       width: 100%;
     }
@@ -984,4 +992,5 @@ margin-top: 25px;
         gap: 50px;
     }
 
+    
   }
