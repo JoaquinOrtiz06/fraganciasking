@@ -332,12 +332,15 @@ font-weight: 500;
     grid-template-columns: repeat(3, 1fr);
     gap: 70px;
     margin: 50px;
+    cursor: pointer;
 }
-
-
 
 .item{
     border-radius: 10px;
+}
+
+.item a{
+    text-decoration: none;
 }
 
 .item:hover{
@@ -354,6 +357,9 @@ font-weight: 500;
 
 .product-title{
     text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
 }
 
 .item img{
@@ -370,12 +376,15 @@ font-weight: 500;
 
 .item:hover img{    
     transform: scale(1.2);
+    
 }
 
 .price{
     font-size: 18px;
     font-weight: 900;
     text-align: end;
+    text-decoration: none;
+    color: black;
 }
 
 /* GALLERY */
@@ -542,6 +551,73 @@ font-weight: 500;
     font-size: 1.6rem;
     text-transform: uppercase;
 }
+
+
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen se quede fija mientras desplazas la página */
+  }
+  
+  .contenedor {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para que se vea bien sobre la imagen */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4a4a4a;
+  }
+  
+  .lista-productos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .lista-productos li a {
+    display: block;
+    text-decoration: none;
+    background-color: #d1e8ff;
+    color: #003366;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .lista-productos li a:hover {
+    background-color: #a9d1f2;
+  }
+  
+  .descripcion {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 0.9em;
+  }
+  
 
 
 /* MEDIA QUERIES --768px */

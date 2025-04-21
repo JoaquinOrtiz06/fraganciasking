@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Producto</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <section class="container-hero">
+             <div class="customer-support">
+                 <i class="fa-solid fa-headset"></i>
+                 <div class="content-customer-support">
+                     <span class="text">Consulta por tu perfume!</span>
+                     <span class="number">2473-457449</span>
+                 </div>
+             </div>
+                 <div class="container-logo">
+                     <img src="imgs/fraganciaskinglogo.png" alt="logo">
+                     <h1 class="logo"><a href="./index.html">Fragancias King</a></h1>
+                 </div>
+        </section>
+        <section class="container-navbar">
+            <nav class="navbar container">
+                <ul class="menu">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Perfumes Árabes</a></li>
+                    <li><a href="#footer">Más</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar...">
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </section>
+
+
+    </header>
+
+        <div class="container-title"></div>
+
+        <main>
+            <div class="productosolo">
+                <img id="imagen-perfume" class="perfume-img" src="imgs/perfume-9pm.png" alt="producto">
+            </div>
+                
+
+            <div class="container-info-product">
+                <div class="container-price">
+                    <span id="precio-perfume">$65.000</span>
+                </div>
+
+                <div class="container-details-product">
+                    <div class="form-group">
+                        <label for="size">Tamaño</label>
+                        <select name="size" id="size">
+                            <option disabled selected value="">
+                                Elige un tamaño
+                            </option>
+                            <option value="ML">100ml</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <div class="container-buy-now">
+                    <a class="wpp2" href="https://wa.me/+542473457449"><span class="whatsapp"> <i class="fa-brands fa-whatsapp"></i></span>Comprar Ahora</a>
+                </div>
+
+                <div class="container-description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                <div class="text-description hidden">
+                    <p id="descripcion-perfume">9PM es una fragancia masculina de carácter intenso y envolvente. Con un equilibrio perfecto entre oud, especias y toques florales, esta fragancia crea una experiencia única y duradera. Ideal para quienes buscan un perfume sofisticado y exclusivo.</p>
+                </div>
+            </div>
+
+                <div class="container-notes">
+                    <div class="title-notes">
+                        <h4>Notas</h4>
+                        <img id="notas-perfume" class="imgn" src="imgs/9pmnotas.jpg" alt="notita">
+                    </div>
+
+                    <div class="text-notes">
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <section class="container-related-products" id="pdrelacionados">
+            <h2>Productos Relacionados</h2>
+            <div class="card-list-products" id="contenedor-relacionados">
+                <div class="card">
+                    <a href="product.html?id=khamrahqahwa" class="card">
+                    <div class="card-img">
+                        <img src="imgs/khamrahqahwaposta.png" alt="producto-1">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>Khamrah Qahwa</h3>
+                            <p class="category">
+                                Fragancia Unisex
+                            </p>
+                        </div>
+                        <div class="price">$70.000</div>
+                    </div>
+                </a>
+                </div>
+                
+                <div class="card">
+                    <a href="product.html?id=honor" class="card">
+                    <div class="card-img">
+                        <img src="imgs/honorglory (1).png" alt="producto-2">
+                    </div>
+                    <div class="info-card">
+                        <div class="text-product">
+                            <h3>Honor & Glory</h3>
+                            <p class="category">
+                                Fragancia Unisex
+                            </p>
+                        </div>
+                        <div class="price">$75.000</div>
+                    </div>
+                </a>
+                </div>
+
+                <!-- Producto relacionado 9PM -->
+        <div class="card">
+            <a href="product.html?id=9pm" class="card">
+                <div class="card-img">
+                    <img src="imgs/perfume-9pm.png" alt="9PM">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>9PM</h3>
+                        <p class="category">Fragancia Masculina</p>
+                    </div>
+                    <div class="price">$65.000</div>
+                </div>
+            </a>
+        </div>
+
+            </div>
+        </section>
+
+            <footer class="footer">
+                <div class="container container-footer" id="footer">
+                    <div class="menu-footer">
+                        <div class="contact-info">
+                            <p class="title-footer">Información de Contacto</p>
+                            <ul>
+                                <li>Dirección: Derqui 38, Venado Tuerto</li>
+                                <li>Dirección 2: Salta 1123, Firmat</li>
+                                <li> Teléfono: 2473-457449</li>
+                            </ul>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/fraganciasking_/"><span class="instagram"> <i class="fa-brands fa-instagram"></i></span></a>
+                                <a href="https://wa.me/+542473457449"><span class="whatsapp"> <i class="fa-brands fa-whatsapp"></i></span></a> 
+                            </div>
+                        </div>
+                        <section class="paymentsmet">
+                            <h1 class="metpagos">Efectivo y Transferencia</h1>
+                            <i class="fa-solid fa-money-bill"></i>
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </section>
+                    </div>
+        
+                    <div class="copyright">
+                        <p>
+                            Desarrollado por Joaquín Ortiz &copy; 2025
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+        <script src="https://kit.fontawesome.com/0beb35040e.js"
+            crossorigin="anonymous"
+            ></script>
+            <script src="index.js"></script>
+</body>
+</html>
