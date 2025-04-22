@@ -50,7 +50,7 @@ const perfumes = {
     nombre: "Khamrah Qahwa",
     imagen: "imgs/khamrahqahwaposta.png",
     descripcion: "Khamrah Qahwa es una fragancia cálida y especiada, con notas predominantes de canela, cardamomo y un toque de madera. A medida que evoluciona, se mezclan con ámbar y vainilla, creando una esencia amaderada y dulce. Es una fragancia envolvente y profunda, perfecta para hombres que buscan un aroma cálido y distintivo.",
-    precio: "$60.000",
+    precio: "$65.000",
     notasImg: "imgs/notaskhamrahq.png",
     categoria: "Unisex",
     stock: true,
