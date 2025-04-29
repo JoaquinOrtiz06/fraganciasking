@@ -349,11 +349,20 @@ font-weight: 500;
 
 .info-product{
     padding: 15px 30px;
-    line-height: 2;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+.stockgod{
+    color: red;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: start;
+    text-decoration: none;
+}
+
 
 .product-title{
     text-align: center;

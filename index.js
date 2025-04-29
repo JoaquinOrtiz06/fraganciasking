@@ -53,7 +53,7 @@ const perfumes = {
     precio: "$65.000",
     notasImg: "imgs/notaskhamrahq.png",
     categoria: "Unisex",
-    stock: true,
+    stock: false,
   },
   "fakhar": {
     nombre: "Fakhar Pride",
