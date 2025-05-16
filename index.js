@@ -50,16 +50,18 @@ const perfumes = {
     nombre: "Khamrah Qahwa",
     imagen: "imgs/khamrahqahwaposta.png",
     descripcion: "Khamrah Qahwa es una fragancia cálida y especiada, con notas predominantes de canela, cardamomo y un toque de madera. A medida que evoluciona, se mezclan con ámbar y vainilla, creando una esencia amaderada y dulce. Es una fragancia envolvente y profunda, perfecta para hombres que buscan un aroma cálido y distintivo.",
-    precio: "$65.000",
+    precioOriginal: 70000,
+    descuento: 20,
     notasImg: "imgs/notaskhamrahq.png",
     categoria: "Unisex",
-    stock: false,
+    stock: true,
   },
   "fakhar": {
     nombre: "Fakhar Pride",
     imagen: "imgs/fakhar-800 (1).png",
     descripcion: "Lataffa Fhakar Pride es una fragancia oriental intensa, con notas de ámbar, vainilla y maderas exóticas. Perfecta para quienes buscan un aroma cálido, sofisticado y duradero. Ideal para noches especiales y ocasiones elegantes. Es muy elegante y masculino, con un fondo amaderado.",
-    precio: "$60.000",
+    precioOriginal: 67500,
+    descuento: 20,
     notasImg: "imgs/fakharnotas.webp",
     categoria: "Masculina",
     stock: true,
@@ -71,6 +73,36 @@ const perfumes = {
     precio: "$65.000",
     notasImg: "imgs/notashonor.png",
     categoria: "Unisex",
+    stock: false,
+  },
+  "bourbon": {
+    nombre: "Asad Bourbon",
+    imagen: "imgs/asadbourbon1.png",
+    descripcion: "Asad Bourbon de Lattafa es un perfume cálido, especiado y adictivo que combina notas intensas de vainilla, ámbar y especias con un fondo ahumado inspirado en el bourbon. Ideal para las noches frescas, destaca por su presencia envolvente y masculina.",
+    precioOriginal: 80000,
+    descuento: 20,
+    notasImg: "imgs/notasbourbon.png",
+    categoria: "Unisex",
+    stock: true,
+  },
+  "oudforglory": {
+    nombre: "Oud for Glory",
+    imagen: "imgs/oudforgloy2.png",
+    descripcion: "Oud for Glory de Lattafa es una fragancia oriental intensa y majestuosa, pensada para hombres que buscan dejar una huella inolvidable. Su apertura combina notas especiadas y amaderadas que despiertan los sentidos, seguida de un corazón dominado por la riqueza del oud y el patchouli, aportando profundidad y carácter. En el fondo, el ámbar y la vainilla suavizan la composición, creando una estela cálida, opulenta y envolvente.",
+    precioOriginal: 62500,
+    descuento: 20,
+    notasImg: "imgs/notasoudforglory.png",
+    categoria: "Unisex",
+    stock: true,
+  },
+  "thekingdom": {
+    nombre: "The Kingdom",
+    imagen: "imgs/thekingdom500.png",
+    descripcion: "The Kingdom de Lattafa es una fragancia intensa y majestuosa, con notas amaderadas, cuero y especias que transmiten autoridad y sofisticación. Su aroma profundo y varonil la hace ideal para noches frescas o eventos formales.",
+    precioOriginal: 80000,
+    descuento: 20,
+    notasImg: "imgs/notasthekingdom.png",
+    categoria: "Masculina",
     stock: true,
   },
   "yara": {
@@ -80,7 +112,7 @@ const perfumes = {
     precio: "$60.000",
     notasImg: "imgs/notasyaramoi.png",
     categoria: "Femenina",
-    stock: true,
+    stock: false,
   }
 };
 
@@ -98,7 +130,17 @@ if (perfume) {
   // Mostrar precio o mensaje "Sin Stock"
   const precioElemento = document.getElementById("precio-perfume");
   if (perfume.stock) {
-    precioElemento.textContent = perfume.precio;
+    if (perfume.descuento && perfume.precioOriginal) {
+      const precioConDescuento = perfume.precioOriginal * (1 - perfume.descuento / 100);
+    precioElemento.innerHTML = `
+    <span class="price">$${perfume.precioOriginal.toLocaleString()}</span>
+        <span class="discount">$${precioConDescuento.toLocaleString()}</span>
+        <span class="discount-badge">-${perfume.descuento}%</span>
+      `;
+    } else {
+      precioElemento.textContent = `$${perfume.precioOriginal.toLocaleString()}`;
+    }
+  precioElemento.style.color = "black"; // para asegurarte que el texto esté en negro
   } else {
     precioElemento.textContent = "Sin Stock";
     precioElemento.style.color = "red"; // Opcional: cambia el color para destacar
@@ -106,10 +148,13 @@ if (perfume) {
 
   // === PRODUCTOS RELACIONADOS DINÁMICOS ===
   const productosRelacionados = {
-    "9pm": ["khamrahqahwa", "honor"],
-    "khamrahqahwa": ["9pm", "honor"],
-    "honor": ["9pm", "khamrahqahwa"],
-    "fakhar": [],
+    "9pm": ["khamrahqahwa","bourbon","oudforglory"],
+    "khamrahqahwa": ["9pm","bourbon","oudforglory"],
+    "honor": ["9pm", "khamrahqahwa","bourbon","oudforglory"],
+    "bourbon": ["9pm", "khamrahqahwa","oudforglory"],
+    "oudforglory": ["9pm", "khamrahqahwa","bourbon"],
+    "fakhar": ["thekingdom"],
+    "thekingdom": ["fakhar"],
     "yara": []
   };
 
@@ -138,7 +183,9 @@ if (perfume) {
             <h3>${rel.nombre}</h3>
             <p class="category">${rel.descripcion}</p>
           </div>
-          <div class="price">${rel.precio}</div>
+          <span class="price">${rel.precioOriginal ? "$" + rel.precioOriginal.toLocaleString() : rel.precio}</span>
+      ${rel.descuento ? `<span class="discount">$${(rel.precioOriginal * (1 - rel.descuento / 100)).toLocaleString()}</span>` : ""}
+      ${rel.descuento ? `<span class="discount-badge">${rel.descuento}% OFF</span>` : ""}
         </div>
       `;
       contenedorRelacionados.appendChild(card);
