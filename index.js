@@ -54,7 +54,7 @@ const perfumes = {
     descuento: 20,
     notasImg: "imgs/notaskhamrahq.png",
     categoria: "Unisex",
-    stock: true,
+    stock: false,
   },
   "fakhar": {
     nombre: "Fakhar Pride",
@@ -83,7 +83,7 @@ const perfumes = {
     descuento: 20,
     notasImg: "imgs/notasbourbon.png",
     categoria: "Unisex",
-    stock: true,
+    stock: false,
   },
   "oudforglory": {
     nombre: "Oud for Glory",
@@ -103,7 +103,7 @@ const perfumes = {
     descuento: 20,
     notasImg: "imgs/notasthekingdom.png",
     categoria: "Masculina",
-    stock: true,
+    stock: false,
   },
   "yara": {
     nombre: "Yara Moi",
